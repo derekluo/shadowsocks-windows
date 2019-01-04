@@ -54,6 +54,7 @@ namespace Shadowsocks.View
         private MenuItem proxyItem;
         private MenuItem hotKeyItem;
         private MenuItem VerboseLoggingToggleItem;
+        private MenuItem PACItem;
         private ConfigForm configForm;
         private ProxyForm proxyForm;
         private LogForm logForm;
@@ -65,6 +66,12 @@ namespace Shadowsocks.View
             this.controller = controller;
 
             LoadMenu();
+            enableItem.Visible = false;
+            modeItem.Visible = false;
+            PACItem.Visible = false;
+            proxyItem.Visible = false;
+            ShareOverLANItem.Visible = false;
+            hotKeyItem.Visible = false;
 
             controller.EnableStatusChanged += controller_EnableStatusChanged;
             controller.ConfigChanged += controller_ConfigChanged;
@@ -276,7 +283,7 @@ namespace Shadowsocks.View
                     CreateMenuItem("Scan QRCode from Screen...", new EventHandler(this.ScanQRCodeItem_Click)),
                     CreateMenuItem("Import URL from Clipboard...", new EventHandler(this.ImportURLItem_Click))
                 }),
-                CreateMenuGroup("PAC ", new MenuItem[] {
+                this.PACItem=CreateMenuGroup("PAC ", new MenuItem[] {
                     this.localPACItem = CreateMenuItem("Local PAC", new EventHandler(this.LocalPACItem_Click)),
                     this.onlinePACItem = CreateMenuItem("Online PAC", new EventHandler(this.OnlinePACItem_Click)),
                     new MenuItem("-"),

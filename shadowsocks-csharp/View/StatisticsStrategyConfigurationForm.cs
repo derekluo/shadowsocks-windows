@@ -25,7 +25,7 @@ namespace Shadowsocks.View
         {
             if (controller == null) return;
             InitializeComponent();
-            Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            Icon = Icon.FromHandle(Resources.ssw128_green.GetHicon());
             _speedSeries = StatisticsChart.Series["Speed"];
             _packageLossSeries = StatisticsChart.Series["Package Loss"];
             _pingSeries = StatisticsChart.Series["Ping"];

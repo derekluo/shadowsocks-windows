@@ -43,7 +43,7 @@ namespace Shadowsocks.View
             this.controller = controller;
             this.filename = filename;
             InitializeComponent();
-            Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            Icon = Icon.FromHandle(Resources.ssw128_green.GetHicon());
 
             LogViewerConfig config = controller.GetConfigurationCopy().logViewer;
 

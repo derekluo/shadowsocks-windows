@@ -23,7 +23,7 @@ namespace Shadowsocks.View
         {
             this.code = code;
             InitializeComponent();
-            this.Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            this.Icon = Icon.FromHandle(Resources.ssw128_green.GetHicon());
             this.Text = I18N.GetString("QRCode and URL");
         }
 

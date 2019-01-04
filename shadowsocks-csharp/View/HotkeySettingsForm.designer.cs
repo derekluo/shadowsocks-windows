@@ -33,6 +33,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRegisterAll = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.RegHotkeysAtStartupLabel = new System.Windows.Forms.Label();
             this.SwitchSystemProxyLabel = new System.Windows.Forms.Label();
             this.SwitchProxyModeLabel = new System.Windows.Forms.Label();
             this.SwitchAllowLanLabel = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.ShowLogsTextBox = new System.Windows.Forms.TextBox();
             this.ServerMoveUpTextBox = new System.Windows.Forms.TextBox();
             this.ServerMoveDownTextBox = new System.Windows.Forms.TextBox();
-            this.RegHotkeysAtStartupLabel = new System.Windows.Forms.Label();
             this.RegHotkeysAtStartupCheckBox = new System.Windows.Forms.CheckBox();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
@@ -136,6 +136,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(491, 261);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // RegHotkeysAtStartupLabel
+            // 
+            this.RegHotkeysAtStartupLabel.AutoSize = true;
+            this.RegHotkeysAtStartupLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RegHotkeysAtStartupLabel.Location = new System.Drawing.Point(32, 187);
+            this.RegHotkeysAtStartupLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.RegHotkeysAtStartupLabel.Name = "RegHotkeysAtStartupLabel";
+            this.RegHotkeysAtStartupLabel.Size = new System.Drawing.Size(165, 31);
+            this.RegHotkeysAtStartupLabel.TabIndex = 16;
+            this.RegHotkeysAtStartupLabel.Text = "Reg Hotkeys At Startup";
+            this.RegHotkeysAtStartupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SwitchSystemProxyLabel
             // 
@@ -280,18 +292,6 @@
             this.ServerMoveDownTextBox.TabIndex = 13;
             this.ServerMoveDownTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HotkeyDown);
             this.ServerMoveDownTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.HotkeyUp);
-            // 
-            // RegHotkeysAtStartupLabel
-            // 
-            this.RegHotkeysAtStartupLabel.AutoSize = true;
-            this.RegHotkeysAtStartupLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RegHotkeysAtStartupLabel.Location = new System.Drawing.Point(32, 187);
-            this.RegHotkeysAtStartupLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.RegHotkeysAtStartupLabel.Name = "RegHotkeysAtStartupLabel";
-            this.RegHotkeysAtStartupLabel.Size = new System.Drawing.Size(165, 31);
-            this.RegHotkeysAtStartupLabel.TabIndex = 16;
-            this.RegHotkeysAtStartupLabel.Text = "Reg Hotkeys At Startup";
-            this.RegHotkeysAtStartupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RegHotkeysAtStartupCheckBox
             // 

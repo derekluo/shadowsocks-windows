@@ -20,7 +20,7 @@ namespace Shadowsocks.View
             InitializeComponent();
 
             UpdateTexts();
-            this.Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            this.Icon = Icon.FromHandle(Resources.ssw128_green.GetHicon());
 
             this.controller = controller;
             controller.ConfigChanged += controller_ConfigChanged;
