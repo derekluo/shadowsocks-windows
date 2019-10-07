@@ -59,6 +59,8 @@ namespace Shadowsocks.View
         private ProxyForm proxyForm;
         private LogForm logForm;
         private HotkeySettingsForm hotkeySettingsForm;
+        //private TableLayoutPanel tableLayoutPanel6;
+        //private TableLayoutPanel tableLayoutPanel7;
         private string _urlToOpen;
 
         public MenuViewController(ShadowsocksController controller)
@@ -72,6 +74,8 @@ namespace Shadowsocks.View
             proxyItem.Visible = false;
             ShareOverLANItem.Visible = false;
             hotKeyItem.Visible = false;
+            //tableLayoutPanel6.Visible = false;
+            //tableLayoutPanel7.Visible = false;
 
             controller.EnableStatusChanged += controller_EnableStatusChanged;
             controller.ConfigChanged += controller_ConfigChanged;

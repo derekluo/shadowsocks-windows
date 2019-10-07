@@ -1,6 +1,6 @@
 ﻿namespace Shadowsocks.View
 {
-    partial class ConfigForm
+    partial class ConfigFormCopy
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PluginOptionsLabel = new System.Windows.Forms.Label();
+            this.PluginTextBox = new System.Windows.Forms.TextBox();
             this.RemarksTextBox = new System.Windows.Forms.TextBox();
             this.IPLabel = new System.Windows.Forms.Label();
             this.ServerPortLabel = new System.Windows.Forms.Label();
@@ -40,11 +42,14 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.EncryptionLabel = new System.Windows.Forms.Label();
             this.EncryptionSelect = new System.Windows.Forms.ComboBox();
-            this.RemarksLabel = new System.Windows.Forms.Label();
             this.TimeoutLabel = new System.Windows.Forms.Label();
             this.TimeoutTextBox = new System.Windows.Forms.TextBox();
+            this.PluginLabel = new System.Windows.Forms.Label();
+            this.PluginOptionsTextBox = new System.Windows.Forms.TextBox();
+            this.ShowPasswdCheckBox = new System.Windows.Forms.CheckBox();
             this.PluginArgumentsTextBox = new System.Windows.Forms.TextBox();
             this.PluginArgumentsLabel = new System.Windows.Forms.Label();
+            this.RemarksLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.OKButton = new System.Windows.Forms.Button();
             this.MyCancelButton = new System.Windows.Forms.Button();
@@ -53,31 +58,24 @@
             this.ServerGroupBox = new System.Windows.Forms.GroupBox();
             this.ServersListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.ProxyPortTextBox = new System.Windows.Forms.TextBox();
-            this.ProxyPortLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.DuplicateButton = new System.Windows.Forms.Button();
-            this.ShowPasswdCheckBox = new System.Windows.Forms.CheckBox();
-            this.PluginOptionsLabel = new System.Windows.Forms.Label();
-            this.PortableModeCheckBox = new System.Windows.Forms.CheckBox();
-            this.PluginOptionsTextBox = new System.Windows.Forms.TextBox();
-            this.PluginTextBox = new System.Windows.Forms.TextBox();
-            this.PluginLabel = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveDownButton = new System.Windows.Forms.Button();
             this.MoveUpButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.ProxyPortTextBox = new System.Windows.Forms.TextBox();
+            this.ProxyPortLabel = new System.Windows.Forms.Label();
+            this.PortableModeCheckBox = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.DuplicateButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.ServerGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -87,6 +85,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.PluginOptionsLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PluginTextBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.RemarksTextBox, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.IPLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ServerPortLabel, 0, 1);
@@ -96,6 +96,13 @@
             this.tableLayoutPanel1.Controls.Add(this.PasswordTextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.EncryptionLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.EncryptionSelect, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.TimeoutLabel, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.TimeoutTextBox, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PluginLabel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PluginOptionsTextBox, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ShowPasswdCheckBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PluginArgumentsTextBox, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PluginArgumentsLabel, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.RemarksLabel, 0, 9);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 21);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -113,13 +120,34 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(249, 140);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(279, 270);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // PluginOptionsLabel
+            // 
+            this.PluginOptionsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PluginOptionsLabel.AutoSize = true;
+            this.PluginOptionsLabel.Location = new System.Drawing.Point(18, 166);
+            this.PluginOptionsLabel.Name = "PluginOptionsLabel";
+            this.PluginOptionsLabel.Size = new System.Drawing.Size(89, 12);
+            this.PluginOptionsLabel.TabIndex = 6;
+            this.PluginOptionsLabel.Text = "Plugin Options";
+            this.toolTip1.SetToolTip(this.PluginOptionsLabel, "Environment variables");
+            // 
+            // PluginTextBox
+            // 
+            this.PluginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PluginTextBox.Location = new System.Drawing.Point(113, 135);
+            this.PluginTextBox.MaxLength = 256;
+            this.PluginTextBox.Name = "PluginTextBox";
+            this.PluginTextBox.Size = new System.Drawing.Size(160, 21);
+            this.PluginTextBox.TabIndex = 5;
+            this.PluginTextBox.WordWrap = false;
             // 
             // RemarksTextBox
             // 
             this.RemarksTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RemarksTextBox.Location = new System.Drawing.Point(83, 113);
+            this.RemarksTextBox.Location = new System.Drawing.Point(113, 216);
             this.RemarksTextBox.MaxLength = 32;
             this.RemarksTextBox.Name = "RemarksTextBox";
             this.RemarksTextBox.Size = new System.Drawing.Size(160, 21);
@@ -130,7 +158,7 @@
             // 
             this.IPLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.IPLabel.AutoSize = true;
-            this.IPLabel.Location = new System.Drawing.Point(18, 10);
+            this.IPLabel.Location = new System.Drawing.Point(48, 10);
             this.IPLabel.Name = "IPLabel";
             this.IPLabel.Size = new System.Drawing.Size(59, 12);
             this.IPLabel.TabIndex = 0;
@@ -140,7 +168,7 @@
             // 
             this.ServerPortLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ServerPortLabel.AutoSize = true;
-            this.ServerPortLabel.Location = new System.Drawing.Point(6, 37);
+            this.ServerPortLabel.Location = new System.Drawing.Point(36, 37);
             this.ServerPortLabel.Name = "ServerPortLabel";
             this.ServerPortLabel.Size = new System.Drawing.Size(71, 12);
             this.ServerPortLabel.TabIndex = 1;
@@ -150,7 +178,7 @@
             // 
             this.PasswordLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(24, 64);
+            this.PasswordLabel.Location = new System.Drawing.Point(54, 64);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(53, 12);
             this.PasswordLabel.TabIndex = 2;
@@ -161,7 +189,7 @@
             // 
             this.IPTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.IPTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.IPTextBox.Location = new System.Drawing.Point(83, 6);
+            this.IPTextBox.Location = new System.Drawing.Point(113, 6);
             this.IPTextBox.MaxLength = 512;
             this.IPTextBox.Name = "IPTextBox";
             this.IPTextBox.Size = new System.Drawing.Size(160, 21);
@@ -171,7 +199,7 @@
             // ServerPortTextBox
             // 
             this.ServerPortTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ServerPortTextBox.Location = new System.Drawing.Point(83, 33);
+            this.ServerPortTextBox.Location = new System.Drawing.Point(113, 33);
             this.ServerPortTextBox.MaxLength = 10;
             this.ServerPortTextBox.Name = "ServerPortTextBox";
             this.ServerPortTextBox.Size = new System.Drawing.Size(160, 21);
@@ -181,7 +209,7 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(83, 60);
+            this.PasswordTextBox.Location = new System.Drawing.Point(113, 60);
             this.PasswordTextBox.MaxLength = 256;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(160, 21);
@@ -193,7 +221,7 @@
             // 
             this.EncryptionLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.EncryptionLabel.AutoSize = true;
-            this.EncryptionLabel.Location = new System.Drawing.Point(12, 91);
+            this.EncryptionLabel.Location = new System.Drawing.Point(42, 113);
             this.EncryptionLabel.Name = "EncryptionLabel";
             this.EncryptionLabel.Size = new System.Drawing.Size(65, 12);
             this.EncryptionLabel.TabIndex = 4;
@@ -201,7 +229,7 @@
             // 
             // EncryptionSelect
             // 
-            this.EncryptionSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.EncryptionSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EncryptionSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EncryptionSelect.FormattingEnabled = true;
@@ -227,26 +255,16 @@
             "aes-256-gcm",
             "chacha20-ietf-poly1305",
             "xchacha20-ietf-poly1305"});
-            this.EncryptionSelect.Location = new System.Drawing.Point(83, 87);
+            this.EncryptionSelect.Location = new System.Drawing.Point(113, 109);
             this.EncryptionSelect.Name = "EncryptionSelect";
             this.EncryptionSelect.Size = new System.Drawing.Size(160, 20);
             this.EncryptionSelect.TabIndex = 4;
-            // 
-            // RemarksLabel
-            // 
-            this.RemarksLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RemarksLabel.AutoSize = true;
-            this.RemarksLabel.Location = new System.Drawing.Point(30, 117);
-            this.RemarksLabel.Name = "RemarksLabel";
-            this.RemarksLabel.Size = new System.Drawing.Size(47, 12);
-            this.RemarksLabel.TabIndex = 8;
-            this.RemarksLabel.Text = "Remarks";
             // 
             // TimeoutLabel
             // 
             this.TimeoutLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.TimeoutLabel.AutoSize = true;
-            this.TimeoutLabel.Location = new System.Drawing.Point(28, 120);
+            this.TimeoutLabel.Location = new System.Drawing.Point(30, 247);
             this.TimeoutLabel.Name = "TimeoutLabel";
             this.TimeoutLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimeoutLabel.Size = new System.Drawing.Size(77, 12);
@@ -256,16 +274,50 @@
             // TimeoutTextBox
             // 
             this.TimeoutTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TimeoutTextBox.Location = new System.Drawing.Point(111, 116);
+            this.TimeoutTextBox.Location = new System.Drawing.Point(113, 243);
             this.TimeoutTextBox.MaxLength = 5;
             this.TimeoutTextBox.Name = "TimeoutTextBox";
             this.TimeoutTextBox.Size = new System.Drawing.Size(160, 21);
             this.TimeoutTextBox.TabIndex = 9;
             // 
+            // PluginLabel
+            // 
+            this.PluginLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PluginLabel.AutoSize = true;
+            this.PluginLabel.Location = new System.Drawing.Point(18, 139);
+            this.PluginLabel.Name = "PluginLabel";
+            this.PluginLabel.Size = new System.Drawing.Size(89, 12);
+            this.PluginLabel.TabIndex = 5;
+            this.PluginLabel.Text = "Plugin Program";
+            // 
+            // PluginOptionsTextBox
+            // 
+            this.PluginOptionsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PluginOptionsTextBox.Location = new System.Drawing.Point(113, 162);
+            this.PluginOptionsTextBox.MaxLength = 256;
+            this.PluginOptionsTextBox.Name = "PluginOptionsTextBox";
+            this.PluginOptionsTextBox.Size = new System.Drawing.Size(160, 21);
+            this.PluginOptionsTextBox.TabIndex = 6;
+            this.PluginOptionsTextBox.WordWrap = false;
+            // 
+            // ShowPasswdCheckBox
+            // 
+            this.ShowPasswdCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ShowPasswdCheckBox.AutoSize = true;
+            this.ShowPasswdCheckBox.Location = new System.Drawing.Point(113, 87);
+            this.ShowPasswdCheckBox.Name = "ShowPasswdCheckBox";
+            this.ShowPasswdCheckBox.Size = new System.Drawing.Size(102, 16);
+            this.ShowPasswdCheckBox.TabIndex = 3;
+            this.ShowPasswdCheckBox.Text = "Show Password";
+            this.ShowPasswdCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ShowPasswdCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPasswdCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswdCheckBox_CheckedChanged);
+            // 
             // PluginArgumentsTextBox
             // 
             this.PluginArgumentsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PluginArgumentsTextBox.Location = new System.Drawing.Point(111, 89);
+            this.PluginArgumentsTextBox.Location = new System.Drawing.Point(113, 189);
             this.PluginArgumentsTextBox.MaxLength = 512;
             this.PluginArgumentsTextBox.Name = "PluginArgumentsTextBox";
             this.PluginArgumentsTextBox.Size = new System.Drawing.Size(160, 21);
@@ -276,7 +328,7 @@
             // 
             this.PluginArgumentsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PluginArgumentsLabel.AutoSize = true;
-            this.PluginArgumentsLabel.Location = new System.Drawing.Point(4, 93);
+            this.PluginArgumentsLabel.Location = new System.Drawing.Point(6, 193);
             this.PluginArgumentsLabel.Name = "PluginArgumentsLabel";
             this.PluginArgumentsLabel.Size = new System.Drawing.Size(101, 12);
             this.PluginArgumentsLabel.TabIndex = 7;
@@ -284,12 +336,22 @@
             this.toolTip1.SetToolTip(this.PluginArgumentsLabel, "Not SIP003 standard. Used as CLI arguments.\r\nMandatory:\r\n%SS_LOCAL_HOST%, %SS_LOC" +
         "SL_PORT%, %SS_REMOTE_HOST%, %SS_REMOTE_PORT%\r\nOptional:\r\n%SS_PLUGIN_OPTIONS%");
             // 
+            // RemarksLabel
+            // 
+            this.RemarksLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RemarksLabel.AutoSize = true;
+            this.RemarksLabel.Location = new System.Drawing.Point(60, 220);
+            this.RemarksLabel.Name = "RemarksLabel";
+            this.RemarksLabel.Size = new System.Drawing.Size(47, 12);
+            this.RemarksLabel.TabIndex = 8;
+            this.RemarksLabel.Text = "Remarks";
+            // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel2.Location = new System.Drawing.Point(154, 187);
+            this.panel2.Location = new System.Drawing.Point(165, 187);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(0, 0);
             this.panel2.TabIndex = 1;
@@ -352,7 +414,7 @@
             this.ServerGroupBox.Location = new System.Drawing.Point(178, 0);
             this.ServerGroupBox.Margin = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.ServerGroupBox.Name = "ServerGroupBox";
-            this.ServerGroupBox.Size = new System.Drawing.Size(260, 178);
+            this.ServerGroupBox.Size = new System.Drawing.Size(290, 308);
             this.ServerGroupBox.TabIndex = 0;
             this.ServerGroupBox.TabStop = false;
             this.ServerGroupBox.Text = "Server";
@@ -376,27 +438,67 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.ServersListBox, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.ServerGroupBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 1, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 263);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(468, 404);
             this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.AutoSize = true;
+            this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.Controls.Add(this.MoveDownButton, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.MoveUpButton, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 372);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(166, 32);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // MoveDownButton
+            // 
+            this.MoveDownButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MoveDownButton.Location = new System.Drawing.Point(86, 6);
+            this.MoveDownButton.Margin = new System.Windows.Forms.Padding(3, 6, 0, 3);
+            this.MoveDownButton.Name = "MoveDownButton";
+            this.MoveDownButton.Size = new System.Drawing.Size(80, 23);
+            this.MoveDownButton.TabIndex = 16;
+            this.MoveDownButton.Text = "Move D&own";
+            this.MoveDownButton.UseVisualStyleBackColor = true;
+            this.MoveDownButton.Click += new System.EventHandler(this.MoveDownButton_Click);
+            // 
+            // MoveUpButton
+            // 
+            this.MoveUpButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MoveUpButton.Location = new System.Drawing.Point(0, 6);
+            this.MoveUpButton.Margin = new System.Windows.Forms.Padding(0, 6, 3, 3);
+            this.MoveUpButton.Name = "MoveUpButton";
+            this.MoveUpButton.Size = new System.Drawing.Size(80, 23);
+            this.MoveUpButton.TabIndex = 15;
+            this.MoveUpButton.Text = "Move &Up";
+            this.MoveUpButton.UseVisualStyleBackColor = true;
+            this.MoveUpButton.Click += new System.EventHandler(this.MoveUpButton_Click);
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel5.AutoSize = true;
             this.tableLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -405,14 +507,15 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.Controls.Add(this.ProxyPortTextBox, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.ProxyPortLabel, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(166, 178);
+            this.tableLayoutPanel5.Controls.Add(this.PortableModeCheckBox, 0, 1);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(166, 308);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(3);
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(196, 33);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(196, 64);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
             // ProxyPortTextBox
@@ -435,6 +538,19 @@
             this.ProxyPortLabel.TabIndex = 10;
             this.ProxyPortLabel.Text = "Proxy Port";
             // 
+            // PortableModeCheckBox
+            // 
+            this.PortableModeCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PortableModeCheckBox.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.PortableModeCheckBox, 2);
+            this.PortableModeCheckBox.Location = new System.Drawing.Point(6, 37);
+            this.PortableModeCheckBox.Name = "PortableModeCheckBox";
+            this.PortableModeCheckBox.Size = new System.Drawing.Size(102, 16);
+            this.PortableModeCheckBox.TabIndex = 11;
+            this.PortableModeCheckBox.Text = "Portable Mode";
+            this.toolTip1.SetToolTip(this.PortableModeCheckBox, "restart required");
+            this.PortableModeCheckBox.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSize = true;
@@ -446,7 +562,7 @@
             this.tableLayoutPanel3.Controls.Add(this.MyCancelButton, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.OKButton, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(279, 214);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(309, 375);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -461,168 +577,30 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.Controls.Add(this.DuplicateButton, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.DeleteButton, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.AddButton, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 178);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 308);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(166, 32);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(166, 64);
             this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.Controls.Add(this.DuplicateButton, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.ShowPasswdCheckBox, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.PluginOptionsLabel, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.PortableModeCheckBox, 0, 5);
-            this.tableLayoutPanel7.Controls.Add(this.PluginOptionsTextBox, 1, 2);
-            this.tableLayoutPanel7.Controls.Add(this.PluginArgumentsLabel, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.PluginArgumentsTextBox, 1, 3);
-            this.tableLayoutPanel7.Controls.Add(this.TimeoutLabel, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.TimeoutTextBox, 1, 4);
-            this.tableLayoutPanel7.Controls.Add(this.PluginTextBox, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.PluginLabel, 0, 1);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(169, 246);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 7;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(266, 14);
-            this.tableLayoutPanel7.TabIndex = 13;
-            this.tableLayoutPanel7.Visible = false;
             // 
             // DuplicateButton
             // 
             this.DuplicateButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DuplicateButton.Location = new System.Drawing.Point(0, 6);
+            this.DuplicateButton.Location = new System.Drawing.Point(0, 38);
             this.DuplicateButton.Margin = new System.Windows.Forms.Padding(0, 6, 3, 3);
             this.DuplicateButton.Name = "DuplicateButton";
             this.DuplicateButton.Size = new System.Drawing.Size(80, 23);
-            this.DuplicateButton.TabIndex = 18;
+            this.DuplicateButton.TabIndex = 14;
             this.DuplicateButton.Text = "Dupli&cate";
             this.DuplicateButton.UseVisualStyleBackColor = true;
-            // 
-            // ShowPasswdCheckBox
-            // 
-            this.ShowPasswdCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ShowPasswdCheckBox.AutoSize = true;
-            this.ShowPasswdCheckBox.Location = new System.Drawing.Point(111, 3);
-            this.ShowPasswdCheckBox.Name = "ShowPasswdCheckBox";
-            this.ShowPasswdCheckBox.Size = new System.Drawing.Size(102, 26);
-            this.ShowPasswdCheckBox.TabIndex = 4;
-            this.ShowPasswdCheckBox.Text = "Show Password";
-            this.ShowPasswdCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ShowPasswdCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PluginOptionsLabel
-            // 
-            this.PluginOptionsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PluginOptionsLabel.AutoSize = true;
-            this.PluginOptionsLabel.Location = new System.Drawing.Point(16, 66);
-            this.PluginOptionsLabel.Name = "PluginOptionsLabel";
-            this.PluginOptionsLabel.Size = new System.Drawing.Size(89, 12);
-            this.PluginOptionsLabel.TabIndex = 10;
-            this.PluginOptionsLabel.Text = "Plugin Options";
-            this.toolTip1.SetToolTip(this.PluginOptionsLabel, "Environment variables");
-            // 
-            // PortableModeCheckBox
-            // 
-            this.PortableModeCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.PortableModeCheckBox.AutoSize = true;
-            this.PortableModeCheckBox.Location = new System.Drawing.Point(3, 143);
-            this.PortableModeCheckBox.Name = "PortableModeCheckBox";
-            this.PortableModeCheckBox.Size = new System.Drawing.Size(102, 16);
-            this.PortableModeCheckBox.TabIndex = 11;
-            this.PortableModeCheckBox.Text = "Portable Mode";
-            this.toolTip1.SetToolTip(this.PortableModeCheckBox, "restart required");
-            this.PortableModeCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PluginOptionsTextBox
-            // 
-            this.PluginOptionsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PluginOptionsTextBox.Location = new System.Drawing.Point(111, 62);
-            this.PluginOptionsTextBox.MaxLength = 256;
-            this.PluginOptionsTextBox.Name = "PluginOptionsTextBox";
-            this.PluginOptionsTextBox.Size = new System.Drawing.Size(160, 21);
-            this.PluginOptionsTextBox.TabIndex = 9;
-            this.PluginOptionsTextBox.WordWrap = false;
-            // 
-            // PluginTextBox
-            // 
-            this.PluginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PluginTextBox.Location = new System.Drawing.Point(111, 35);
-            this.PluginTextBox.MaxLength = 256;
-            this.PluginTextBox.Name = "PluginTextBox";
-            this.PluginTextBox.Size = new System.Drawing.Size(160, 21);
-            this.PluginTextBox.TabIndex = 7;
-            this.PluginTextBox.WordWrap = false;
-            // 
-            // PluginLabel
-            // 
-            this.PluginLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PluginLabel.AutoSize = true;
-            this.PluginLabel.Location = new System.Drawing.Point(16, 39);
-            this.PluginLabel.Name = "PluginLabel";
-            this.PluginLabel.Size = new System.Drawing.Size(89, 12);
-            this.PluginLabel.TabIndex = 8;
-            this.PluginLabel.Text = "Plugin Program";
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.AutoSize = true;
-            this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.Controls.Add(this.MoveDownButton, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.MoveUpButton, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 243);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(166, 20);
-            this.tableLayoutPanel6.TabIndex = 12;
-            this.tableLayoutPanel6.Visible = false;
-            // 
-            // MoveDownButton
-            // 
-            this.MoveDownButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MoveDownButton.Location = new System.Drawing.Point(86, 6);
-            this.MoveDownButton.Margin = new System.Windows.Forms.Padding(3, 6, 0, 3);
-            this.MoveDownButton.Name = "MoveDownButton";
-            this.MoveDownButton.Size = new System.Drawing.Size(80, 23);
-            this.MoveDownButton.TabIndex = 16;
-            this.MoveDownButton.Text = "Move D&own";
-            this.MoveDownButton.UseVisualStyleBackColor = true;
-            // 
-            // MoveUpButton
-            // 
-            this.MoveUpButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MoveUpButton.Location = new System.Drawing.Point(0, 6);
-            this.MoveUpButton.Margin = new System.Windows.Forms.Padding(0, 6, 3, 3);
-            this.MoveUpButton.Name = "MoveUpButton";
-            this.MoveUpButton.Size = new System.Drawing.Size(80, 23);
-            this.MoveUpButton.TabIndex = 15;
-            this.MoveUpButton.Text = "Move &Up";
-            this.MoveUpButton.UseVisualStyleBackColor = true;
+            this.DuplicateButton.Click += new System.EventHandler(this.DuplicateButton_Click);
             // 
             // ConfigForm
             // 
@@ -632,7 +610,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.MyCancelButton;
-            this.ClientSize = new System.Drawing.Size(468, 260);
+            this.ClientSize = new System.Drawing.Size(491, 438);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -652,13 +630,11 @@
             this.ServerGroupBox.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,23 +665,22 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TextBox ProxyPortTextBox;
         private System.Windows.Forms.Label ProxyPortLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button MoveDownButton;
+        private System.Windows.Forms.Button MoveUpButton;
+        private System.Windows.Forms.Button DuplicateButton;
         private System.Windows.Forms.Label TimeoutLabel;
         private System.Windows.Forms.TextBox TimeoutTextBox;
+        private System.Windows.Forms.Label PluginOptionsLabel;
+        private System.Windows.Forms.TextBox PluginTextBox;
+        private System.Windows.Forms.Label PluginLabel;
+        private System.Windows.Forms.TextBox PluginOptionsTextBox;
+        private System.Windows.Forms.CheckBox ShowPasswdCheckBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.TextBox PluginArgumentsTextBox;
         private System.Windows.Forms.Label PluginArgumentsLabel;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox PortableModeCheckBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button MoveDownButton;
-        private System.Windows.Forms.Button MoveUpButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.CheckBox ShowPasswdCheckBox;
-        private System.Windows.Forms.Label PluginOptionsLabel;
-        private System.Windows.Forms.TextBox PluginOptionsTextBox;
-        private System.Windows.Forms.TextBox PluginTextBox;
-        private System.Windows.Forms.Label PluginLabel;
-        private System.Windows.Forms.Button DuplicateButton;
     }
 }
 
